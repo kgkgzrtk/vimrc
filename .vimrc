@@ -3,7 +3,10 @@ set number "行番号を表示する
 set title "編集中のファイル名を表示
 set showmatch "括弧入力時の対応する括弧を表示
 syntax on "コードの色分け
+set expandtab
 set tabstop=4 "インデントをスペース4つ分に設定
+set softtabstop=4
+set shiftwidth=4
 set smartindent "オートインデント
 
 "#####検索設定#####
@@ -29,11 +32,18 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
-
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 colorscheme jellybeans
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_start_level=1
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=110
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=140
+let g:indent_guides_guide_size = 1
 
 let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
 let g:EasyMotion_leader_key=";"
