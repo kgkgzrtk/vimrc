@@ -1,4 +1,4 @@
-set runtimepath+={{dein.vimのパス}}
+set runtimepath+=~/dein_vim
 set backspace=indent,eol,start
 
 call dein#begin(expand('~/.vim/dein'))
@@ -22,17 +22,17 @@ endif
 filetype plugin indent on
 
 
-"#####表示設定#####
-set number "行番号を表示する
-set title "編集中のファイル名を表示
-set showmatch "括弧入力時の対応する括弧を表示
-syntax on "コードの色分け
+"#####display#####
+set number
+set title
+set showmatch
+syntax on
 set cursorline
 set expandtab
-set tabstop=4 "インデントをスペース4つ分に設定
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set smartindent "オートインデント
+set smartindent
 set clipboard=unnamed
 set encoding=utf-8
 source $VIMRUNTIME/delmenu.vim
@@ -40,11 +40,13 @@ set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8
 
-"#####検索設定#####
-set ignorecase "大文字/小文字の区別なく検索する
-set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
-set wrapscan "検索時に最後まで行ったら最初に戻る
+"#####search#####
+set ignorecase
+set smartcase
+set wrapscan
 
+
+"#####setting for plug-in#####
 syntax enable
 hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
 
