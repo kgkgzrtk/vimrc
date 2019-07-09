@@ -1,19 +1,18 @@
-Windowsのvimの設定ファイル_vimrcを置いておきます。
-導入は以下に沿ってやるとうまくいくかも！
+Vim布教用README.md
 
-### WindowsのVimの導入手順 ###
+vimの設定ファイル.vimrcを置いておきます
+僕の設定を試したい人は以下の導入手順で入る
 
-0. gvimをインストール
+### installation ###
 
-1. Pythonをインストールする
+0. pipを使えるようにする
 
-2. pip install neovim
+1. pip install neovim
 ※Windows10ではコマンドプロントのエンコードをUTF-8に変更しないと怒られるかも
 
-3. Git for Windowsをインストール
+2. git clone https://github.com/Shougo/dein.vim.git {ここにdeinをインストールするパス}
 
-4. git clone https://github.com/Shougo/dein.vim.git {ここにdeinをインストールするパス}
+3. .vimrcのruntimepathのところを④でインストールしたパスに書き換える
 
-5. _vimrcのruntimepathのところを④でインストールしたパスに書き換える
+4. Vim起動後しばらく経つとプラグインなどが自動インストールされるので、あとは自分好みにいじって楽しむ。
 
-6. gvim起動後しばらく経つとプラグインなどが自動インストールされるので、あとは自分好みにいじって楽しむ。
